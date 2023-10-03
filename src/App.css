@@ -1,38 +1,178 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
-  flex-direction: column;
+}
+
+.clima-container {
+  flex: 1;
+  min-width: 50%;
+  min-height: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  background-color: aquamarine;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.transporte-container {
+  flex: 1;
+  min-width: 50%;
+  min-height: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  background-color:bisque;
+}
+
+
+.info-ciudad,
+.info-general {
+  flex: 1;
+  min-width: 300px;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: cornsilk;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 5px;
 }
 
-.App-link {
-  color: #61dafb;
+.fecha-hora-container {
+  display: flex;
+  grid-template-columns: 1fr;
+  align-items: center;
+  gap: 5px;
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin: 10px;
+  background-color: cornsilk;
+  border-radius: 5px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.info-detallada{
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin: 10px;
+  background-color: cornsilk;
+  border-radius: 5px;
+} 
+
+.humedad,
+.visibilidad,
+.viento,
+.aire {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  min-width: 300px;
+  text-align: center;
+  background-color: #f4f4f4;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
 }
+
+.salida-puesta,
+.temp-min-max {
+  flex: 1;
+  min-width: 300px;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: cornsilk;
+  justify-content: space-around;
+  align-items: center;
+  border: 1px solid #ddd;
+}*/
+
+.sol-info {
+  min-width: 300px;
+  display: grid;
+  grid-template-columns:1fr, 1fr ;
+  align-items: center;
+}
+
+.salida-sol{
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  min-width: 300px;
+  text-align: center;
+  background-color: #f4f4f4;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+.puesta-sol {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  min-width: 300px;
+  text-align: center;
+  background-color: #f4f4f4;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+.icon {
+  width: 50px; /* Ajusta el tamaño según sea necesario */
+  height: 50px; /* Ajusta el tamaño según sea necesario */
+}
+
+.temp-min,
+.temp-max{
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  min-width: 300px;
+  text-align: center;
+  background-color: #f4f4f4;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+
+.temperatura-por-hora {
+  flex: 1;
+  min-width: 300px;
+  margin: 10px;
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 10px;
+  background-color: cornsilk;
+  overflow-x: auto; /* Agrega un scroll horizontal */
+  white-space: nowrap; /* Evita el salto de línea */
+}
+
+.lista-temperaturas {
+  display: flex;
+  gap: 10px;
+  padding: 5px;
+  min-width: 300px;
+  margin-top: 10px;
+  overflow-x: auto; /* Agrega un scroll horizontal */
+  white-space: nowrap; /* Evita el salto de línea */
+  background-color: rgb(7, 100, 27);
+  border-radius: 5px;
+}
+
+.temperatura-hora {
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  background-color: cornsilk;
+}
+
+
+

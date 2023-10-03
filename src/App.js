@@ -1,23 +1,25 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import Clima from './Clima/Clima';
+import Transporte from './Transporte/Transporte';
 
 function App() {
+  // Datos para el clima
+  const datosClima = {
+  };
+
+  
+  const datosTransporte = {
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="clima-container">
+        <Clima {...datosClima} />
+      </div>
+      <div className="transporte-container">
+        <Transporte {...datosTransporte} />
+      </div>
     </div>
   );
 }
