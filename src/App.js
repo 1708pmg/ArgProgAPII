@@ -1,10 +1,46 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import './App.css';
+import Clima from './Clima/Clima';
+import Transporte from './Transporte/Transporte';
+import datosApi from './Clima/api.json';
+
+function App() {
+
+  const [datosClima, setDatosClima] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setDatosClima(datosApi);
+      setLoading(false);
+    }, 1000); 
+  }, []);
+
+  return (
+    <div className="App">
+      <div className="clima-container">
+        {!loading && datosClima && <Clima datosApi={datosClima} />}
+        {loading && <h1>Cargando datos</h1>}
+      </div>
+      <div className="transporte-container">
+        {}
+        <Transporte />
+      </div>
+    </div>
+  );
+}
+
+export default App;
+
+
+
+
+/*import React from 'react';
 import './App.css';
 import Clima from './Clima/Clima';
 import Transporte from './Transporte/Transporte';
 
 function App() {
-  // Datos para el clima
   const datosClima = {
   };
 
@@ -24,5 +60,4 @@ function App() {
   );
 }
 
-export default App;
-
+export default App;*/
